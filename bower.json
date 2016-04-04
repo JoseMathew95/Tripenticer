@@ -1,0 +1,21 @@
+{
+  "name": "tripenticer",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Jose Mathew <jos.india@yahoo.com>"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6"
+  }
+}

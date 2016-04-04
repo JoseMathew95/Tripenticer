@@ -1,0 +1,63 @@
+<%- include ../partials/header.ejs %>
+
+
+<div class="row content-wrapper">
+<h3>Add Holiday Packages</h3>
+<form method="post" >
+  <fieldset class="form-group">
+    <label for="packageName">Package Name</label>
+    <input type="text" class="form-control" name="packageName" required>
+  </fieldset>
+  <fieldset class="form-group">
+    <label for="destination">Destinations</label>
+    <input type="text" class="form-control" name="destination"required >
+  </fieldset>
+  <fieldset class="form-group">
+    <label for="category">Category</label>
+    <select class="form-control" name="category" required>
+      <option>Family Holidays</option>
+      <option>Honeymoon</option>
+      <option>Hillstation Packages</option>
+      <option>Beach Packages</option>
+      <option>Outboud Packages</option>
+    </select>
+  </fieldset>
+  
+    <fieldset class="form-group">
+    <label for="duration">Duration</label>
+    <select class="form-control" name="duration" required>
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+      <option>6</option>
+      <option>7</option>
+      <option>8</option>
+      <option>9</option>
+    </select>
+  </fieldset>
+  
+  <fieldset class="form-group">
+    <label for="overview">Package OverView</label>
+    <textarea class="form-control" name="overview" rows="3"></textarea>
+  </fieldset>
+  
+  <fieldset class="form-group">
+    <label for="inclusions">Package Inclusions</label>
+    <textarea class="form-control" name="inclusions" rows="3"></textarea>
+  </fieldset>
+  
+  <fieldset class="form-group">
+    <label for="itinerary">Itinerary</label>
+    <textarea class="form-control" name="itinerary" rows="24" required></textarea>
+  </fieldset>
+  
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+
+
+
+<%- include ../partials/footer.ejs %>
