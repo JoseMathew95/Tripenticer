@@ -13,6 +13,7 @@ var PackageSchema = new Schema({
 	Overview: String,
 	inclusion: String,
 	itinerary: String,
+	price: Number,
 	created: Number
 }, {
 	collection: 'Packages'

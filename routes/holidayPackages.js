@@ -11,7 +11,7 @@ router.get('/',  function (req, res, next) {
             res.end(err);
         }
         else {
-            res.render('holidayPackages/index', {
+            res.render('HolidayPackages/index', {
                 title: 'Packages',
                 packages: packages,
             });
@@ -20,7 +20,7 @@ router.get('/',  function (req, res, next) {
 });
 
 router.get('/add', function(req,res,next){
-    res.render('holidayPackages/add', { title: 'Add Packages' });
+    res.render('HolidayPackages/add', { title: 'Add Packages' });
 })
 
 router.post('/add', function (req, res, next) {
@@ -32,6 +32,7 @@ router.post('/add', function (req, res, next) {
         Overview: req.body.overview,
         inclusions: req.body.inclusions,
         itinerary: req.body.itinerary,
+        price: req.body.price,
         created: Date.now(),
     }, function (err, User) {
         if (err) {

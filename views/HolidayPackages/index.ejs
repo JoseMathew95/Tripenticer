@@ -1,63 +1,65 @@
 <%- include ../partials/header.ejs %>
-<div class="row content-wrapper">
+<div class="row content-wrapper package-call-to-action">
   <form role="form" class="form-inline">
     <div class="column large-12">
       <div class="row content-wrapper-inner">
-        <h4>Find Your Holiday</h4>
-        <div class="form-group column large-2">
-          <label for="category">Package Category</label>
-          <select class="form-control" id="category">
-            <option><span class="glyphicon glyphicon-cutlery">Family</span></option>
-          </select>
-         </div>
-         <div class="form-group column large-2">
-          <label for="Destination">Destination</label>
-          <select class="form-control" id="Destination">
-            <option><span class="glyphicon glyphicon-map-marker">Destination</span></option>
-          </select>
-         </div>
-         <div class="form-group column large-2" style="float:left">
-          <label for="Duration">Duration</label>
-          <select class="form-control" id="Duration">
-            <option><span class="glyphicon glyphicon-map-marker">Duration</span></option>
-          </select>
-         </div>
-        <div class="form-group column large-6" style="float:left; padding-top:27px">
-        <button type="submit" class="btn btn-sucess" style="background:#088A08">Search My Holidays</button>
-        </div>
+        <div class="package-action-box">
+          <h4 style="margin-left: 15px">Find Your Holiday</h4>
+          <div class="form-group column large-3">
+            <label for="category">Package Category</label>
+            <select class="form-control" id="category" style="width: 220px">
+              <option><span class="glyphicon glyphicon-cutlery">Family</span></option>
+            </select>
+          </div>
+          <div class="form-group column large-3">
+            <label for="Destination">Destination</label>
+            <select class="form-control" id="Destination" style="width: 220px">
+              <option><span class="glyphicon glyphicon-map-marker">Destination</span></option>
+            </select>
+          </div>
+          <div class="form-group column large-3" style="float:left">
+            <label for="Duration">Duration</label>
+            <select class="form-control" id="Duration" style="width: 220px">
+              <option><span class="glyphicon glyphicon-map-marker">Duration</span></option>
+            </select>
+          </div>
+          <div class="form-group column large-3" style="float:left; padding-top:27px">
+          <button type="submit" class="btn btn-sucess" style="background:#088A08; width: 220px" >Search My Holidays</button>
+          </div>
+          
+        </div>   
      </div>
     </div> 
    </form>
+</div>
    
-   
-   <div class="column large-12">
-      <div class="row content-wrapper-inner">
-        <% if (packages.length > 0) { %>
-        <div class="panel-body table-responsive">
-            <table class="table table-bordered table-striped table-hover">
-                <tbody>
-                <% for (var i = 0; i < packages.length; i++) { %>
-                <tr>
-                    <td>
-                        <h4><%= packages[i].name %></h4>
-                        <p><%= packages[i].Overview %></p>
-                    </td>
-                    <td>
-                        <p>Destinations:&nbsp<%= packages[i].Destinations %></p>
-                    </td>
-                    <td>
-                        <p>Duration:&nbsp<%= packages[i].Duration %> &nbsp Days</p>
-                        <p>Category:&nbsp<%= packages[i].Category%></p>
-                    </td>
-                </tr><% } %>
-                </tbody>
-            </table>
-        </div> 
-        <% } %>
+
+
+<div class="row content-wrapper">
+  <div class="row content-wrapper-inner">
+    <% if (packages.length > 0) { %>
+      <% for (var i = 0; i < packages.length; i++) { %>
+      <div class="package-view-box">
       
-      
+        <div class="column large-4" style="padding: 0px">
+          
+          <img src="images/thekkady.jpg">
+        </div>
+        <div class="column large-6">
+          <h4><%= packages[i].name %></h4>
+          <p><%= packages[i].Overview %></p>
+          <p>Destinations&nbsp:&nbsp<%=packages[i].Destinations %></p>
+        </div>
+        <div class="column large-2">
+          <p>Duration:&nbsp<%= packages[i].Duration %> &nbsp Days</p>
+          <p>Category:&nbsp<%= packages[i].Category%></p>
+          <p>Price:&nbspRs.<%= packages[i].price%></p>
+        </div>
       </div>
-   </div>
+      <% } %>
+    <% } %>
+  </div>
+</div>
    
    
    
